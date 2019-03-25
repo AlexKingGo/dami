@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.dm.mapper.DmAreaMapper">
+
+    <select id="getDmAreaById" resultType="cn.dm.pojo.DmArea">
+        select
+                id as id,
+                name as name,
+                parent as parent,
+                level as level,
+                isHot as isHot,
+                createdTime as createdTime,
+                updatedTime as updatedTime
+        from dm_area
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getDmAreaListByMap" resultType="cn.dm.pojo.DmArea" parameterType="java.util.Map">
+        select
+                id as id,
+                name as name,
+                parent as parent,
+                level as level,
+                isHot as isHot,
+                createdTime as createdTime,
+                updatedTime as updatedTime
+        from dm_area
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="name != null and name!=''">
+                    and name=#{name}
+                </if>
+                <if test="parent != null and parent!=''">
+                    and parent=#{parent}
+                </if>
+                <if test="level != null and level!=''">
+                    and level=#{level}
+                </if>
+                <if test="isHot != null and isHot!=''">
+                    and isHot=#{isHot}
+                </if>
+                <if test="createdTime != null and createdTime!=''">
+                    and createdTime=#{createdTime}
+                </if>
+                <if test="updatedTime != null and updatedTime!=''">
+                    and updatedTime=#{updatedTime}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getDmAreaCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from dm_area
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="name != null and name!=''">
+                    and name=#{name}
+                </if>
+                <if test="parent != null and parent!=''">
+                    and parent=#{parent}
+                </if>
+                <if test="level != null and level!=''">
+                    and level=#{level}
+                </if>
+                <if test="isHot != null and isHot!=''">
+                    and isHot=#{isHot}
+                </if>
+                <if test="createdTime != null and createdTime!=''">
+                    and createdTime=#{createdTime}
+                </if>
+                <if test="updatedTime != null and updatedTime!=''">
+                    and updatedTime=#{updatedTime}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertDmArea" parameterType="cn.dm.pojo.DmArea">
+        insert into dm_area(
+                        name,
+                        parent,
+                        level,
+                        isHot,
+                        createdTime,
+                        updatedTime)
+        values(
+                     #{name},
+                     #{parent},
+                     #{level},
+                     #{isHot},
+                     #{createdTime},
+                    #{updatedTime})
+    </insert>
+
+    <update id="updateDmArea" parameterType="cn.dm.pojo.DmArea">
+        update dm_area
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="name != null and name!=''">
+                            name=#{name},
+                        </if>
+                        <if test="parent != null and parent!=''">
+                            parent=#{parent},
+                        </if>
+                        <if test="level != null and level!=''">
+                            level=#{level},
+                        </if>
+                        <if test="isHot != null and isHot!=''">
+                            isHot=#{isHot},
+                        </if>
+                        <if test="createdTime != null and createdTime!=''">
+                            createdTime=#{createdTime},
+                        </if>
+                        <if test="updatedTime != null and updatedTime!=''">
+                            updatedTime=#{updatedTime}
+                        </if>
+        </trim>
+    </update>
+</mapper>

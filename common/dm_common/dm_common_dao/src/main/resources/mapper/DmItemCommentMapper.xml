@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.dm.mapper.DmItemCommentMapper">
+
+    <select id="getDmItemCommentById" resultType="cn.dm.pojo.DmItemComment">
+        select
+                id as id,
+                itemId as itemId,
+                userId as userId,
+                score as score,
+                content as content,
+                createdTime as createdTime,
+                updatedTime as updatedTime
+        from dm_item_comment
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getDmItemCommentListByMap" resultType="cn.dm.pojo.DmItemComment" parameterType="java.util.Map">
+        select
+                id as id,
+                itemId as itemId,
+                userId as userId,
+                score as score,
+                content as content,
+                createdTime as createdTime,
+                updatedTime as updatedTime
+        from dm_item_comment
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="itemId != null and itemId!=''">
+                    and itemId=#{itemId}
+                </if>
+                <if test="userId != null and userId!=''">
+                    and userId=#{userId}
+                </if>
+                <if test="score != null and score!=''">
+                    and score=#{score}
+                </if>
+                <if test="content != null and content!=''">
+                    and content=#{content}
+                </if>
+                <if test="createdTime != null and createdTime!=''">
+                    and createdTime=#{createdTime}
+                </if>
+                <if test="updatedTime != null and updatedTime!=''">
+                    and updatedTime=#{updatedTime}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getDmItemCommentCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from dm_item_comment
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="itemId != null and itemId!=''">
+                    and itemId=#{itemId}
+                </if>
+                <if test="userId != null and userId!=''">
+                    and userId=#{userId}
+                </if>
+                <if test="score != null and score!=''">
+                    and score=#{score}
+                </if>
+                <if test="content != null and content!=''">
+                    and content=#{content}
+                </if>
+                <if test="createdTime != null and createdTime!=''">
+                    and createdTime=#{createdTime}
+                </if>
+                <if test="updatedTime != null and updatedTime!=''">
+                    and updatedTime=#{updatedTime}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertDmItemComment" parameterType="cn.dm.pojo.DmItemComment">
+        insert into dm_item_comment(
+                        itemId,
+                        userId,
+                        score,
+                        content,
+                        createdTime,
+                        updatedTime)
+        values(
+                     #{itemId},
+                     #{userId},
+                     #{score},
+                     #{content},
+                     #{createdTime},
+                    #{updatedTime})
+    </insert>
+
+    <update id="updateDmItemComment" parameterType="cn.dm.pojo.DmItemComment">
+        update dm_item_comment
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="itemId != null and itemId!=''">
+                            itemId=#{itemId},
+                        </if>
+                        <if test="userId != null and userId!=''">
+                            userId=#{userId},
+                        </if>
+                        <if test="score != null and score!=''">
+                            score=#{score},
+                        </if>
+                        <if test="content != null and content!=''">
+                            content=#{content},
+                        </if>
+                        <if test="createdTime != null and createdTime!=''">
+                            createdTime=#{createdTime},
+                        </if>
+                        <if test="updatedTime != null and updatedTime!=''">
+                            updatedTime=#{updatedTime}
+                        </if>
+        </trim>
+    </update>
+</mapper>

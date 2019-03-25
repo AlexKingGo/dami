@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.dm.mapper.DmCinemaSeatMapper">
+
+    <select id="getDmCinemaSeatById" resultType="cn.dm.pojo.DmCinemaSeat">
+        select
+                id as id,
+                x as x,
+                y as y,
+                areaLevel as areaLevel,
+                cinemaId as cinemaId,
+                sort as sort,
+                status as status,
+                createdTime as createdTime,
+                updatedTime as updatedTime
+        from dm_cinema_seat
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getDmCinemaSeatListByMap" resultType="cn.dm.pojo.DmCinemaSeat" parameterType="java.util.Map">
+        select
+                id as id,
+                x as x,
+                y as y,
+                areaLevel as areaLevel,
+                cinemaId as cinemaId,
+                sort as sort,
+                status as status,
+                createdTime as createdTime,
+                updatedTime as updatedTime
+        from dm_cinema_seat
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="x != null and x!=''">
+                    and x=#{x}
+                </if>
+                <if test="y != null and y!=''">
+                    and y=#{y}
+                </if>
+                <if test="areaLevel != null and areaLevel!=''">
+                    and areaLevel=#{areaLevel}
+                </if>
+                <if test="cinemaId != null and cinemaId!=''">
+                    and cinemaId=#{cinemaId}
+                </if>
+                <if test="sort != null and sort!=''">
+                    and sort=#{sort}
+                </if>
+                <if test="status != null and status!=''">
+                    and status=#{status}
+                </if>
+                <if test="createdTime != null and createdTime!=''">
+                    and createdTime=#{createdTime}
+                </if>
+                <if test="updatedTime != null and updatedTime!=''">
+                    and updatedTime=#{updatedTime}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getDmCinemaSeatCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from dm_cinema_seat
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="x != null and x!=''">
+                    and x=#{x}
+                </if>
+                <if test="y != null and y!=''">
+                    and y=#{y}
+                </if>
+                <if test="areaLevel != null and areaLevel!=''">
+                    and areaLevel=#{areaLevel}
+                </if>
+                <if test="cinemaId != null and cinemaId!=''">
+                    and cinemaId=#{cinemaId}
+                </if>
+                <if test="sort != null and sort!=''">
+                    and sort=#{sort}
+                </if>
+                <if test="status != null and status!=''">
+                    and status=#{status}
+                </if>
+                <if test="createdTime != null and createdTime!=''">
+                    and createdTime=#{createdTime}
+                </if>
+                <if test="updatedTime != null and updatedTime!=''">
+                    and updatedTime=#{updatedTime}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertDmCinemaSeat" parameterType="cn.dm.pojo.DmCinemaSeat">
+        insert into dm_cinema_seat(
+                        x,
+                        y,
+                        areaLevel,
+                        cinemaId,
+                        sort,
+                        status,
+                        createdTime,
+                        updatedTime)
+        values(
+                     #{x},
+                     #{y},
+                     #{areaLevel},
+                     #{cinemaId},
+                     #{sort},
+                     #{status},
+                     #{createdTime},
+                    #{updatedTime})
+    </insert>
+
+    <update id="updateDmCinemaSeat" parameterType="cn.dm.pojo.DmCinemaSeat">
+        update dm_cinema_seat
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="x != null and x!=''">
+                            x=#{x},
+                        </if>
+                        <if test="y != null and y!=''">
+                            y=#{y},
+                        </if>
+                        <if test="areaLevel != null and areaLevel!=''">
+                            areaLevel=#{areaLevel},
+                        </if>
+                        <if test="cinemaId != null and cinemaId!=''">
+                            cinemaId=#{cinemaId},
+                        </if>
+                        <if test="sort != null and sort!=''">
+                            sort=#{sort},
+                        </if>
+                        <if test="status != null and status!=''">
+                            status=#{status},
+                        </if>
+                        <if test="createdTime != null and createdTime!=''">
+                            createdTime=#{createdTime},
+                        </if>
+                        <if test="updatedTime != null and updatedTime!=''">
+                            updatedTime=#{updatedTime}
+                        </if>
+        </trim>
+    </update>
+</mapper>

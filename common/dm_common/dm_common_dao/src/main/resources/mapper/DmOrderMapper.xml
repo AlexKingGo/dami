@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.dm.mapper.DmOrderMapper">
+
+    <select id="getDmOrderById" resultType="cn.dm.pojo.DmOrder">
+        select
+                id as id,
+                orderNo as orderNo,
+                userId as userId,
+                schedulerId as schedulerId,
+                itemId as itemId,
+                itemName as itemName,
+                wxTradeNo as wxTradeNo,
+                aliTradeNo as aliTradeNo,
+                orderType as orderType,
+                payType as payType,
+                totalCount as totalCount,
+                area as area,
+                sourceType as sourceType,
+                isNeedInvoice as isNeedInvoice,
+                invoiceType as invoiceType,
+                invoiceHead as invoiceHead,
+                invoiceNo as invoiceNo,
+                isNeedInsurance as isNeedInsurance,
+                totalAmount as totalAmount,
+                insuranceAmount as insuranceAmount,
+                createdTime as createdTime,
+                updatedTime as updatedTime
+        from dm_order
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getDmOrderListByMap" resultType="cn.dm.pojo.DmOrder" parameterType="java.util.Map">
+        select
+                id as id,
+                orderNo as orderNo,
+                userId as userId,
+                schedulerId as schedulerId,
+                itemId as itemId,
+                itemName as itemName,
+                wxTradeNo as wxTradeNo,
+                aliTradeNo as aliTradeNo,
+                orderType as orderType,
+                payType as payType,
+                totalCount as totalCount,
+                area as area,
+                sourceType as sourceType,
+                isNeedInvoice as isNeedInvoice,
+                invoiceType as invoiceType,
+                invoiceHead as invoiceHead,
+                invoiceNo as invoiceNo,
+                isNeedInsurance as isNeedInsurance,
+                totalAmount as totalAmount,
+                insuranceAmount as insuranceAmount,
+                createdTime as createdTime,
+                updatedTime as updatedTime
+        from dm_order
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="orderNo != null and orderNo!=''">
+                    and orderNo=#{orderNo}
+                </if>
+                <if test="userId != null and userId!=''">
+                    and userId=#{userId}
+                </if>
+                <if test="schedulerId != null and schedulerId!=''">
+                    and schedulerId=#{schedulerId}
+                </if>
+                <if test="itemId != null and itemId!=''">
+                    and itemId=#{itemId}
+                </if>
+                <if test="itemName != null and itemName!=''">
+                    and itemName=#{itemName}
+                </if>
+                <if test="wxTradeNo != null and wxTradeNo!=''">
+                    and wxTradeNo=#{wxTradeNo}
+                </if>
+                <if test="aliTradeNo != null and aliTradeNo!=''">
+                    and aliTradeNo=#{aliTradeNo}
+                </if>
+                <if test="orderType != null and orderType!=''">
+                    and orderType=#{orderType}
+                </if>
+                <if test="payType != null and payType!=''">
+                    and payType=#{payType}
+                </if>
+                <if test="totalCount != null and totalCount!=''">
+                    and totalCount=#{totalCount}
+                </if>
+                <if test="area != null and area!=''">
+                    and area=#{area}
+                </if>
+                <if test="sourceType != null and sourceType!=''">
+                    and sourceType=#{sourceType}
+                </if>
+                <if test="isNeedInvoice != null and isNeedInvoice!=''">
+                    and isNeedInvoice=#{isNeedInvoice}
+                </if>
+                <if test="invoiceType != null and invoiceType!=''">
+                    and invoiceType=#{invoiceType}
+                </if>
+                <if test="invoiceHead != null and invoiceHead!=''">
+                    and invoiceHead=#{invoiceHead}
+                </if>
+                <if test="invoiceNo != null and invoiceNo!=''">
+                    and invoiceNo=#{invoiceNo}
+                </if>
+                <if test="isNeedInsurance != null and isNeedInsurance!=''">
+                    and isNeedInsurance=#{isNeedInsurance}
+                </if>
+                <if test="totalAmount != null and totalAmount!=''">
+                    and totalAmount=#{totalAmount}
+                </if>
+                <if test="insuranceAmount != null and insuranceAmount!=''">
+                    and insuranceAmount=#{insuranceAmount}
+                </if>
+                <if test="createdTime != null and createdTime!=''">
+                    and createdTime=#{createdTime}
+                </if>
+                <if test="updatedTime != null and updatedTime!=''">
+                    and updatedTime=#{updatedTime}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getDmOrderCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from dm_order
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="orderNo != null and orderNo!=''">
+                    and orderNo=#{orderNo}
+                </if>
+                <if test="userId != null and userId!=''">
+                    and userId=#{userId}
+                </if>
+                <if test="schedulerId != null and schedulerId!=''">
+                    and schedulerId=#{schedulerId}
+                </if>
+                <if test="itemId != null and itemId!=''">
+                    and itemId=#{itemId}
+                </if>
+                <if test="itemName != null and itemName!=''">
+                    and itemName=#{itemName}
+                </if>
+                <if test="wxTradeNo != null and wxTradeNo!=''">
+                    and wxTradeNo=#{wxTradeNo}
+                </if>
+                <if test="aliTradeNo != null and aliTradeNo!=''">
+                    and aliTradeNo=#{aliTradeNo}
+                </if>
+                <if test="orderType != null and orderType!=''">
+                    and orderType=#{orderType}
+                </if>
+                <if test="payType != null and payType!=''">
+                    and payType=#{payType}
+                </if>
+                <if test="totalCount != null and totalCount!=''">
+                    and totalCount=#{totalCount}
+                </if>
+                <if test="area != null and area!=''">
+                    and area=#{area}
+                </if>
+                <if test="sourceType != null and sourceType!=''">
+                    and sourceType=#{sourceType}
+                </if>
+                <if test="isNeedInvoice != null and isNeedInvoice!=''">
+                    and isNeedInvoice=#{isNeedInvoice}
+                </if>
+                <if test="invoiceType != null and invoiceType!=''">
+                    and invoiceType=#{invoiceType}
+                </if>
+                <if test="invoiceHead != null and invoiceHead!=''">
+                    and invoiceHead=#{invoiceHead}
+                </if>
+                <if test="invoiceNo != null and invoiceNo!=''">
+                    and invoiceNo=#{invoiceNo}
+                </if>
+                <if test="isNeedInsurance != null and isNeedInsurance!=''">
+                    and isNeedInsurance=#{isNeedInsurance}
+                </if>
+                <if test="totalAmount != null and totalAmount!=''">
+                    and totalAmount=#{totalAmount}
+                </if>
+                <if test="insuranceAmount != null and insuranceAmount!=''">
+                    and insuranceAmount=#{insuranceAmount}
+                </if>
+                <if test="createdTime != null and createdTime!=''">
+                    and createdTime=#{createdTime}
+                </if>
+                <if test="updatedTime != null and updatedTime!=''">
+                    and updatedTime=#{updatedTime}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertDmOrder" parameterType="cn.dm.pojo.DmOrder">
+        insert into dm_order(
+                        orderNo,
+                        userId,
+                        schedulerId,
+                        itemId,
+                        itemName,
+                        wxTradeNo,
+                        aliTradeNo,
+                        orderType,
+                        payType,
+                        totalCount,
+                        area,
+                        sourceType,
+                        isNeedInvoice,
+                        invoiceType,
+                        invoiceHead,
+                        invoiceNo,
+                        isNeedInsurance,
+                        totalAmount,
+                        insuranceAmount,
+                        createdTime,
+                        updatedTime)
+        values(
+                     #{orderNo},
+                     #{userId},
+                     #{schedulerId},
+                     #{itemId},
+                     #{itemName},
+                     #{wxTradeNo},
+                     #{aliTradeNo},
+                     #{orderType},
+                     #{payType},
+                     #{totalCount},
+                     #{area},
+                     #{sourceType},
+                     #{isNeedInvoice},
+                     #{invoiceType},
+                     #{invoiceHead},
+                     #{invoiceNo},
+                     #{isNeedInsurance},
+                     #{totalAmount},
+                     #{insuranceAmount},
+                     #{createdTime},
+                    #{updatedTime})
+    </insert>
+
+    <update id="updateDmOrder" parameterType="cn.dm.pojo.DmOrder">
+        update dm_order
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="orderNo != null and orderNo!=''">
+                            orderNo=#{orderNo},
+                        </if>
+                        <if test="userId != null and userId!=''">
+                            userId=#{userId},
+                        </if>
+                        <if test="schedulerId != null and schedulerId!=''">
+                            schedulerId=#{schedulerId},
+                        </if>
+                        <if test="itemId != null and itemId!=''">
+                            itemId=#{itemId},
+                        </if>
+                        <if test="itemName != null and itemName!=''">
+                            itemName=#{itemName},
+                        </if>
+                        <if test="wxTradeNo != null and wxTradeNo!=''">
+                            wxTradeNo=#{wxTradeNo},
+                        </if>
+                        <if test="aliTradeNo != null and aliTradeNo!=''">
+                            aliTradeNo=#{aliTradeNo},
+                        </if>
+                        <if test="orderType != null and orderType!=''">
+                            orderType=#{orderType},
+                        </if>
+                        <if test="payType != null and payType!=''">
+                            payType=#{payType},
+                        </if>
+                        <if test="totalCount != null and totalCount!=''">
+                            totalCount=#{totalCount},
+                        </if>
+                        <if test="area != null and area!=''">
+                            area=#{area},
+                        </if>
+                        <if test="sourceType != null and sourceType!=''">
+                            sourceType=#{sourceType},
+                        </if>
+                        <if test="isNeedInvoice != null and isNeedInvoice!=''">
+                            isNeedInvoice=#{isNeedInvoice},
+                        </if>
+                        <if test="invoiceType != null and invoiceType!=''">
+                            invoiceType=#{invoiceType},
+                        </if>
+                        <if test="invoiceHead != null and invoiceHead!=''">
+                            invoiceHead=#{invoiceHead},
+                        </if>
+                        <if test="invoiceNo != null and invoiceNo!=''">
+                            invoiceNo=#{invoiceNo},
+                        </if>
+                        <if test="isNeedInsurance != null and isNeedInsurance!=''">
+                            isNeedInsurance=#{isNeedInsurance},
+                        </if>
+                        <if test="totalAmount != null and totalAmount!=''">
+                            totalAmount=#{totalAmount},
+                        </if>
+                        <if test="insuranceAmount != null and insuranceAmount!=''">
+                            insuranceAmount=#{insuranceAmount},
+                        </if>
+                        <if test="createdTime != null and createdTime!=''">
+                            createdTime=#{createdTime},
+                        </if>
+                        <if test="updatedTime != null and updatedTime!=''">
+                            updatedTime=#{updatedTime}
+                        </if>
+        </trim>
+    </update>
+</mapper>

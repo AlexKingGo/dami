@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.dm.mapper.DmCinemaMapper">
+
+    <select id="getDmCinemaById" resultType="cn.dm.pojo.DmCinema">
+        select
+                id as id,
+                name as name,
+                address as address,
+                areaId as areaId,
+                areaName as areaName,
+                xLength as xLength,
+                yLength as yLength,
+                latitude as latitude,
+                longitude as longitude,
+                createdTime as createdTime,
+                updatedTime as updatedTime
+        from dm_cinema
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getDmCinemaListByMap" resultType="cn.dm.pojo.DmCinema" parameterType="java.util.Map">
+        select
+                id as id,
+                name as name,
+                address as address,
+                areaId as areaId,
+                areaName as areaName,
+                xLength as xLength,
+                yLength as yLength,
+                latitude as latitude,
+                longitude as longitude,
+                createdTime as createdTime,
+                updatedTime as updatedTime
+        from dm_cinema
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="name != null and name!=''">
+                    and name=#{name}
+                </if>
+                <if test="address != null and address!=''">
+                    and address=#{address}
+                </if>
+                <if test="areaId != null and areaId!=''">
+                    and areaId=#{areaId}
+                </if>
+                <if test="areaName != null and areaName!=''">
+                    and areaName=#{areaName}
+                </if>
+                <if test="xLength != null and xLength!=''">
+                    and xLength=#{xLength}
+                </if>
+                <if test="yLength != null and yLength!=''">
+                    and yLength=#{yLength}
+                </if>
+                <if test="latitude != null and latitude!=''">
+                    and latitude=#{latitude}
+                </if>
+                <if test="longitude != null and longitude!=''">
+                    and longitude=#{longitude}
+                </if>
+                <if test="createdTime != null and createdTime!=''">
+                    and createdTime=#{createdTime}
+                </if>
+                <if test="updatedTime != null and updatedTime!=''">
+                    and updatedTime=#{updatedTime}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getDmCinemaCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from dm_cinema
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="name != null and name!=''">
+                    and name=#{name}
+                </if>
+                <if test="address != null and address!=''">
+                    and address=#{address}
+                </if>
+                <if test="areaId != null and areaId!=''">
+                    and areaId=#{areaId}
+                </if>
+                <if test="areaName != null and areaName!=''">
+                    and areaName=#{areaName}
+                </if>
+                <if test="xLength != null and xLength!=''">
+                    and xLength=#{xLength}
+                </if>
+                <if test="yLength != null and yLength!=''">
+                    and yLength=#{yLength}
+                </if>
+                <if test="latitude != null and latitude!=''">
+                    and latitude=#{latitude}
+                </if>
+                <if test="longitude != null and longitude!=''">
+                    and longitude=#{longitude}
+                </if>
+                <if test="createdTime != null and createdTime!=''">
+                    and createdTime=#{createdTime}
+                </if>
+                <if test="updatedTime != null and updatedTime!=''">
+                    and updatedTime=#{updatedTime}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertDmCinema" parameterType="cn.dm.pojo.DmCinema">
+        insert into dm_cinema(
+                        name,
+                        address,
+                        areaId,
+                        areaName,
+                        xLength,
+                        yLength,
+                        latitude,
+                        longitude,
+                        createdTime,
+                        updatedTime)
+        values(
+                     #{name},
+                     #{address},
+                     #{areaId},
+                     #{areaName},
+                     #{xLength},
+                     #{yLength},
+                     #{latitude},
+                     #{longitude},
+                     #{createdTime},
+                    #{updatedTime})
+    </insert>
+
+    <update id="updateDmCinema" parameterType="cn.dm.pojo.DmCinema">
+        update dm_cinema
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="name != null and name!=''">
+                            name=#{name},
+                        </if>
+                        <if test="address != null and address!=''">
+                            address=#{address},
+                        </if>
+                        <if test="areaId != null and areaId!=''">
+                            areaId=#{areaId},
+                        </if>
+                        <if test="areaName != null and areaName!=''">
+                            areaName=#{areaName},
+                        </if>
+                        <if test="xLength != null and xLength!=''">
+                            xLength=#{xLength},
+                        </if>
+                        <if test="yLength != null and yLength!=''">
+                            yLength=#{yLength},
+                        </if>
+                        <if test="latitude != null and latitude!=''">
+                            latitude=#{latitude},
+                        </if>
+                        <if test="longitude != null and longitude!=''">
+                            longitude=#{longitude},
+                        </if>
+                        <if test="createdTime != null and createdTime!=''">
+                            createdTime=#{createdTime},
+                        </if>
+                        <if test="updatedTime != null and updatedTime!=''">
+                            updatedTime=#{updatedTime}
+                        </if>
+        </trim>
+    </update>
+</mapper>

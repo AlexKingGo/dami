@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.dm.mapper.DmItemMapper">
+
+    <select id="getDmItemById" resultType="cn.dm.pojo.DmItem">
+        select
+                id as id,
+                itemName as itemName,
+                abstractMessage as abstractMessage,
+                itemType1Id as itemType1Id,
+                itemType1Name as itemType1Name,
+                itemType2Id as itemType2Id,
+                itemType2Name as itemType2Name,
+                state as state,
+                basicDescription as basicDescription,
+                projectDescription as projectDescription,
+                reminderDescription as reminderDescription,
+                longitude as longitude,
+                latitude as latitude,
+                isBanner as isBanner,
+                isRecommend as isRecommend,
+                avgScore as avgScore,
+                commentCount as commentCount,
+                cinemaId as cinemaId,
+                startTime as startTime,
+                endTime as endTime,
+                minPrice as minPrice,
+                maxPrice as maxPrice,
+                ageGroup as ageGroup,
+                createdTime as createdTime,
+                updatedTime as updatedTime
+        from dm_item
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getDmItemListByMap" resultType="cn.dm.pojo.DmItem" parameterType="java.util.Map">
+        select
+                id as id,
+                itemName as itemName,
+                abstractMessage as abstractMessage,
+                itemType1Id as itemType1Id,
+                itemType1Name as itemType1Name,
+                itemType2Id as itemType2Id,
+                itemType2Name as itemType2Name,
+                state as state,
+                basicDescription as basicDescription,
+                projectDescription as projectDescription,
+                reminderDescription as reminderDescription,
+                longitude as longitude,
+                latitude as latitude,
+                isBanner as isBanner,
+                isRecommend as isRecommend,
+                avgScore as avgScore,
+                commentCount as commentCount,
+                cinemaId as cinemaId,
+                startTime as startTime,
+                endTime as endTime,
+                minPrice as minPrice,
+                maxPrice as maxPrice,
+                ageGroup as ageGroup,
+                createdTime as createdTime,
+                updatedTime as updatedTime
+        from dm_item
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="itemName != null and itemName!=''">
+                    and itemName=#{itemName}
+                </if>
+                <if test="abstractMessage != null and abstractMessage!=''">
+                    and abstractMessage=#{abstractMessage}
+                </if>
+                <if test="itemType1Id != null and itemType1Id!=''">
+                    and itemType1Id=#{itemType1Id}
+                </if>
+                <if test="itemType1Name != null and itemType1Name!=''">
+                    and itemType1Name=#{itemType1Name}
+                </if>
+                <if test="itemType2Id != null and itemType2Id!=''">
+                    and itemType2Id=#{itemType2Id}
+                </if>
+                <if test="itemType2Name != null and itemType2Name!=''">
+                    and itemType2Name=#{itemType2Name}
+                </if>
+                <if test="state != null and state!=''">
+                    and state=#{state}
+                </if>
+                <if test="basicDescription != null and basicDescription!=''">
+                    and basicDescription=#{basicDescription}
+                </if>
+                <if test="projectDescription != null and projectDescription!=''">
+                    and projectDescription=#{projectDescription}
+                </if>
+                <if test="reminderDescription != null and reminderDescription!=''">
+                    and reminderDescription=#{reminderDescription}
+                </if>
+                <if test="longitude != null and longitude!=''">
+                    and longitude=#{longitude}
+                </if>
+                <if test="latitude != null and latitude!=''">
+                    and latitude=#{latitude}
+                </if>
+                <if test="isBanner != null and isBanner!=''">
+                    and isBanner=#{isBanner}
+                </if>
+                <if test="isRecommend != null and isRecommend!=''">
+                    and isRecommend=#{isRecommend}
+                </if>
+                <if test="avgScore != null and avgScore!=''">
+                    and avgScore=#{avgScore}
+                </if>
+                <if test="commentCount != null and commentCount!=''">
+                    and commentCount=#{commentCount}
+                </if>
+                <if test="cinemaId != null and cinemaId!=''">
+                    and cinemaId=#{cinemaId}
+                </if>
+                <if test="startTime != null and startTime!=''">
+                    and startTime=#{startTime}
+                </if>
+                <if test="endTime != null and endTime!=''">
+                    and endTime=#{endTime}
+                </if>
+                <if test="minPrice != null and minPrice!=''">
+                    and minPrice=#{minPrice}
+                </if>
+                <if test="maxPrice != null and maxPrice!=''">
+                    and maxPrice=#{maxPrice}
+                </if>
+                <if test="ageGroup != null and ageGroup!=''">
+                    and ageGroup=#{ageGroup}
+                </if>
+                <if test="createdTime != null and createdTime!=''">
+                    and createdTime=#{createdTime}
+                </if>
+                <if test="updatedTime != null and updatedTime!=''">
+                    and updatedTime=#{updatedTime}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getDmItemCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from dm_item
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="itemName != null and itemName!=''">
+                    and itemName=#{itemName}
+                </if>
+                <if test="abstractMessage != null and abstractMessage!=''">
+                    and abstractMessage=#{abstractMessage}
+                </if>
+                <if test="itemType1Id != null and itemType1Id!=''">
+                    and itemType1Id=#{itemType1Id}
+                </if>
+                <if test="itemType1Name != null and itemType1Name!=''">
+                    and itemType1Name=#{itemType1Name}
+                </if>
+                <if test="itemType2Id != null and itemType2Id!=''">
+                    and itemType2Id=#{itemType2Id}
+                </if>
+                <if test="itemType2Name != null and itemType2Name!=''">
+                    and itemType2Name=#{itemType2Name}
+                </if>
+                <if test="state != null and state!=''">
+                    and state=#{state}
+                </if>
+                <if test="basicDescription != null and basicDescription!=''">
+                    and basicDescription=#{basicDescription}
+                </if>
+                <if test="projectDescription != null and projectDescription!=''">
+                    and projectDescription=#{projectDescription}
+                </if>
+                <if test="reminderDescription != null and reminderDescription!=''">
+                    and reminderDescription=#{reminderDescription}
+                </if>
+                <if test="longitude != null and longitude!=''">
+                    and longitude=#{longitude}
+                </if>
+                <if test="latitude != null and latitude!=''">
+                    and latitude=#{latitude}
+                </if>
+                <if test="isBanner != null and isBanner!=''">
+                    and isBanner=#{isBanner}
+                </if>
+                <if test="isRecommend != null and isRecommend!=''">
+                    and isRecommend=#{isRecommend}
+                </if>
+                <if test="avgScore != null and avgScore!=''">
+                    and avgScore=#{avgScore}
+                </if>
+                <if test="commentCount != null and commentCount!=''">
+                    and commentCount=#{commentCount}
+                </if>
+                <if test="cinemaId != null and cinemaId!=''">
+                    and cinemaId=#{cinemaId}
+                </if>
+                <if test="startTime != null and startTime!=''">
+                    and startTime=#{startTime}
+                </if>
+                <if test="endTime != null and endTime!=''">
+                    and endTime=#{endTime}
+                </if>
+                <if test="minPrice != null and minPrice!=''">
+                    and minPrice=#{minPrice}
+                </if>
+                <if test="maxPrice != null and maxPrice!=''">
+                    and maxPrice=#{maxPrice}
+                </if>
+                <if test="ageGroup != null and ageGroup!=''">
+                    and ageGroup=#{ageGroup}
+                </if>
+                <if test="createdTime != null and createdTime!=''">
+                    and createdTime=#{createdTime}
+                </if>
+                <if test="updatedTime != null and updatedTime!=''">
+                    and updatedTime=#{updatedTime}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertDmItem" parameterType="cn.dm.pojo.DmItem">
+        insert into dm_item(
+                        itemName,
+                        abstractMessage,
+                        itemType1Id,
+                        itemType1Name,
+                        itemType2Id,
+                        itemType2Name,
+                        state,
+                        basicDescription,
+                        projectDescription,
+                        reminderDescription,
+                        longitude,
+                        latitude,
+                        isBanner,
+                        isRecommend,
+                        avgScore,
+                        commentCount,
+                        cinemaId,
+                        startTime,
+                        endTime,
+                        minPrice,
+                        maxPrice,
+                        ageGroup,
+                        createdTime,
+                        updatedTime)
+        values(
+                     #{itemName},
+                     #{abstractMessage},
+                     #{itemType1Id},
+                     #{itemType1Name},
+                     #{itemType2Id},
+                     #{itemType2Name},
+                     #{state},
+                     #{basicDescription},
+                     #{projectDescription},
+                     #{reminderDescription},
+                     #{longitude},
+                     #{latitude},
+                     #{isBanner},
+                     #{isRecommend},
+                     #{avgScore},
+                     #{commentCount},
+                     #{cinemaId},
+                     #{startTime},
+                     #{endTime},
+                     #{minPrice},
+                     #{maxPrice},
+                     #{ageGroup},
+                     #{createdTime},
+                    #{updatedTime})
+    </insert>
+
+    <update id="updateDmItem" parameterType="cn.dm.pojo.DmItem">
+        update dm_item
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="itemName != null and itemName!=''">
+                            itemName=#{itemName},
+                        </if>
+                        <if test="abstractMessage != null and abstractMessage!=''">
+                            abstractMessage=#{abstractMessage},
+                        </if>
+                        <if test="itemType1Id != null and itemType1Id!=''">
+                            itemType1Id=#{itemType1Id},
+                        </if>
+                        <if test="itemType1Name != null and itemType1Name!=''">
+                            itemType1Name=#{itemType1Name},
+                        </if>
+                        <if test="itemType2Id != null and itemType2Id!=''">
+                            itemType2Id=#{itemType2Id},
+                        </if>
+                        <if test="itemType2Name != null and itemType2Name!=''">
+                            itemType2Name=#{itemType2Name},
+                        </if>
+                        <if test="state != null and state!=''">
+                            state=#{state},
+                        </if>
+                        <if test="basicDescription != null and basicDescription!=''">
+                            basicDescription=#{basicDescription},
+                        </if>
+                        <if test="projectDescription != null and projectDescription!=''">
+                            projectDescription=#{projectDescription},
+                        </if>
+                        <if test="reminderDescription != null and reminderDescription!=''">
+                            reminderDescription=#{reminderDescription},
+                        </if>
+                        <if test="longitude != null and longitude!=''">
+                            longitude=#{longitude},
+                        </if>
+                        <if test="latitude != null and latitude!=''">
+                            latitude=#{latitude},
+                        </if>
+                        <if test="isBanner != null and isBanner!=''">
+                            isBanner=#{isBanner},
+                        </if>
+                        <if test="isRecommend != null and isRecommend!=''">
+                            isRecommend=#{isRecommend},
+                        </if>
+                        <if test="avgScore != null and avgScore!=''">
+                            avgScore=#{avgScore},
+                        </if>
+                        <if test="commentCount != null and commentCount!=''">
+                            commentCount=#{commentCount},
+                        </if>
+                        <if test="cinemaId != null and cinemaId!=''">
+                            cinemaId=#{cinemaId},
+                        </if>
+                        <if test="startTime != null and startTime!=''">
+                            startTime=#{startTime},
+                        </if>
+                        <if test="endTime != null and endTime!=''">
+                            endTime=#{endTime},
+                        </if>
+                        <if test="minPrice != null and minPrice!=''">
+                            minPrice=#{minPrice},
+                        </if>
+                        <if test="maxPrice != null and maxPrice!=''">
+                            maxPrice=#{maxPrice},
+                        </if>
+                        <if test="ageGroup != null and ageGroup!=''">
+                            ageGroup=#{ageGroup},
+                        </if>
+                        <if test="createdTime != null and createdTime!=''">
+                            createdTime=#{createdTime},
+                        </if>
+                        <if test="updatedTime != null and updatedTime!=''">
+                            updatedTime=#{updatedTime}
+                        </if>
+        </trim>
+    </update>
+</mapper>

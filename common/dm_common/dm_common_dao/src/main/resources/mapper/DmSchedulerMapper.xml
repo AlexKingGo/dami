@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.dm.mapper.DmSchedulerMapper">
+
+    <select id="getDmSchedulerById" resultType="cn.dm.pojo.DmScheduler">
+        select
+                id as id,
+                title as title,
+                startTime as startTime,
+                endTime as endTime,
+                itemId as itemId,
+                cinemaId as cinemaId,
+                createdTime as createdTime,
+                updatedTime as updatedTime
+        from dm_scheduler
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getDmSchedulerListByMap" resultType="cn.dm.pojo.DmScheduler" parameterType="java.util.Map">
+        select
+                id as id,
+                title as title,
+                startTime as startTime,
+                endTime as endTime,
+                itemId as itemId,
+                cinemaId as cinemaId,
+                createdTime as createdTime,
+                updatedTime as updatedTime
+        from dm_scheduler
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="title != null and title!=''">
+                    and title=#{title}
+                </if>
+                <if test="startTime != null and startTime!=''">
+                    and startTime=#{startTime}
+                </if>
+                <if test="endTime != null and endTime!=''">
+                    and endTime=#{endTime}
+                </if>
+                <if test="itemId != null and itemId!=''">
+                    and itemId=#{itemId}
+                </if>
+                <if test="cinemaId != null and cinemaId!=''">
+                    and cinemaId=#{cinemaId}
+                </if>
+                <if test="createdTime != null and createdTime!=''">
+                    and createdTime=#{createdTime}
+                </if>
+                <if test="updatedTime != null and updatedTime!=''">
+                    and updatedTime=#{updatedTime}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getDmSchedulerCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from dm_scheduler
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="title != null and title!=''">
+                    and title=#{title}
+                </if>
+                <if test="startTime != null and startTime!=''">
+                    and startTime=#{startTime}
+                </if>
+                <if test="endTime != null and endTime!=''">
+                    and endTime=#{endTime}
+                </if>
+                <if test="itemId != null and itemId!=''">
+                    and itemId=#{itemId}
+                </if>
+                <if test="cinemaId != null and cinemaId!=''">
+                    and cinemaId=#{cinemaId}
+                </if>
+                <if test="createdTime != null and createdTime!=''">
+                    and createdTime=#{createdTime}
+                </if>
+                <if test="updatedTime != null and updatedTime!=''">
+                    and updatedTime=#{updatedTime}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertDmScheduler" parameterType="cn.dm.pojo.DmScheduler">
+        insert into dm_scheduler(
+                        title,
+                        startTime,
+                        endTime,
+                        itemId,
+                        cinemaId,
+                        createdTime,
+                        updatedTime)
+        values(
+                     #{title},
+                     #{startTime},
+                     #{endTime},
+                     #{itemId},
+                     #{cinemaId},
+                     #{createdTime},
+                    #{updatedTime})
+    </insert>
+
+    <update id="updateDmScheduler" parameterType="cn.dm.pojo.DmScheduler">
+        update dm_scheduler
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="title != null and title!=''">
+                            title=#{title},
+                        </if>
+                        <if test="startTime != null and startTime!=''">
+                            startTime=#{startTime},
+                        </if>
+                        <if test="endTime != null and endTime!=''">
+                            endTime=#{endTime},
+                        </if>
+                        <if test="itemId != null and itemId!=''">
+                            itemId=#{itemId},
+                        </if>
+                        <if test="cinemaId != null and cinemaId!=''">
+                            cinemaId=#{cinemaId},
+                        </if>
+                        <if test="createdTime != null and createdTime!=''">
+                            createdTime=#{createdTime},
+                        </if>
+                        <if test="updatedTime != null and updatedTime!=''">
+                            updatedTime=#{updatedTime}
+                        </if>
+        </trim>
+    </update>
+</mapper>

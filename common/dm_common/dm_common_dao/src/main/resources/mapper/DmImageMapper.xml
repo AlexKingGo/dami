@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.dm.mapper.DmImageMapper">
+
+    <select id="getDmImageById" resultType="cn.dm.pojo.DmImage">
+        select
+                id as id,
+                imgUrl as imgUrl,
+                targetId as targetId,
+                sort as sort,
+                type as type,
+                category as category,
+                createdTime as createdTime,
+                updatedTime as updatedTime
+        from dm_image
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getDmImageListByMap" resultType="cn.dm.pojo.DmImage" parameterType="java.util.Map">
+        select
+                id as id,
+                imgUrl as imgUrl,
+                targetId as targetId,
+                sort as sort,
+                type as type,
+                category as category,
+                createdTime as createdTime,
+                updatedTime as updatedTime
+        from dm_image
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="imgUrl != null and imgUrl!=''">
+                    and imgUrl=#{imgUrl}
+                </if>
+                <if test="targetId != null and targetId!=''">
+                    and targetId=#{targetId}
+                </if>
+                <if test="sort != null and sort!=''">
+                    and sort=#{sort}
+                </if>
+                <if test="type != null and type!=''">
+                    and type=#{type}
+                </if>
+                <if test="category != null and category!=''">
+                    and category=#{category}
+                </if>
+                <if test="createdTime != null and createdTime!=''">
+                    and createdTime=#{createdTime}
+                </if>
+                <if test="updatedTime != null and updatedTime!=''">
+                    and updatedTime=#{updatedTime}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getDmImageCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from dm_image
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="imgUrl != null and imgUrl!=''">
+                    and imgUrl=#{imgUrl}
+                </if>
+                <if test="targetId != null and targetId!=''">
+                    and targetId=#{targetId}
+                </if>
+                <if test="sort != null and sort!=''">
+                    and sort=#{sort}
+                </if>
+                <if test="type != null and type!=''">
+                    and type=#{type}
+                </if>
+                <if test="category != null and category!=''">
+                    and category=#{category}
+                </if>
+                <if test="createdTime != null and createdTime!=''">
+                    and createdTime=#{createdTime}
+                </if>
+                <if test="updatedTime != null and updatedTime!=''">
+                    and updatedTime=#{updatedTime}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertDmImage" parameterType="cn.dm.pojo.DmImage">
+        insert into dm_image(
+                        imgUrl,
+                        targetId,
+                        sort,
+                        type,
+                        category,
+                        createdTime,
+                        updatedTime)
+        values(
+                     #{imgUrl},
+                     #{targetId},
+                     #{sort},
+                     #{type},
+                     #{category},
+                     #{createdTime},
+                    #{updatedTime})
+    </insert>
+
+    <update id="updateDmImage" parameterType="cn.dm.pojo.DmImage">
+        update dm_image
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="imgUrl != null and imgUrl!=''">
+                            imgUrl=#{imgUrl},
+                        </if>
+                        <if test="targetId != null and targetId!=''">
+                            targetId=#{targetId},
+                        </if>
+                        <if test="sort != null and sort!=''">
+                            sort=#{sort},
+                        </if>
+                        <if test="type != null and type!=''">
+                            type=#{type},
+                        </if>
+                        <if test="category != null and category!=''">
+                            category=#{category},
+                        </if>
+                        <if test="createdTime != null and createdTime!=''">
+                            createdTime=#{createdTime},
+                        </if>
+                        <if test="updatedTime != null and updatedTime!=''">
+                            updatedTime=#{updatedTime}
+                        </if>
+        </trim>
+    </update>
+</mapper>

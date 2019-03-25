@@ -1,0 +1,50 @@
+
+_squid:S1444"<Make this "public static class_mapper_save_path" field final(ÚÁ¬¸ùÿÿÿÿ8ğ˜–øê,
+_squid:S1075"ARefactor your code to get this URI from a customizable parameter.(™»ôº8ğ˜–øê,
+ysquid:S3008"[Rename this field "mapper_save_path" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™»ôº8ğ˜–øê,
+squid:S3008"^Rename this field "client_dm_save_path" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”™ŸÉüÿÿÿÿ8ğ˜–øê,
+™"squid:ClassVariableVisibilityCheck"_Make client_dm_save_path a static final constant or non-public and provide accessors if needed.(”™ŸÉüÿÿÿÿ8ğ˜–øê,
+bsquid:S1444"DMake this "public static service_dm_scheduler_save_path" field final(—Ç¶Õ8ğ˜–øê,
+Œ"squid:ClassVariableVisibilityCheck"YMake template_path a static final constant or non-public and provide accessors if needed.(ÃÊ×îøÿÿÿÿ
+œ"squid:ClassVariableVisibilityCheck"bMake class_mapper_save_path a static final constant or non-public and provide accessors if needed.(ÚÁ¬¸ùÿÿÿÿ8ğ˜–øê,
+„squid:S3008"aRename this field "class_mapper_save_path" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÚÁ¬¸ùÿÿÿÿ8ğ˜–øê,
+dsquid:S1075"ARefactor your code to get this URI from a customizable parameter.(ÚÁ¬¸ùÿÿÿÿ8­ƒ€µù,
+tsquid:S3008"XRename this field "template_path" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃÊ×îøÿÿÿÿ
+_squid:S1075"ARefactor your code to get this URI from a customizable parameter.(üä–Ï8­ƒ€µù,
+dsquid:S1075"ARefactor your code to get this URI from a customizable parameter.(‚±ù¤øÿÿÿÿ8ğ˜–øê,
+"squid:ClassVariableVisibilityCheck"dMake service_dm_pay_save_path a static final constant or non-public and provide accessors if needed.(–ı¨ùÿÿÿÿ8ğ˜–øê,
+‡squid:S3008"dRename this field "service_dm_item_save_path" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(…ş‹•ûÿÿÿÿ8ğ˜–øê,
+¢"squid:ClassVariableVisibilityCheck"hMake client_dm_fallback_save_path a static final constant or non-public and provide accessors if needed.(Á—â†üÿÿÿÿ8ğ˜–øê,
+Tsquid:S1444"6Make this "public static mapper_save_path" field final(™»ôº8ğ˜–øê,
+dsquid:S1075"ARefactor your code to get this URI from a customizable parameter.(–ı¨ùÿÿÿÿ8ğ˜–øê,
+dsquid:S1075"ARefactor your code to get this URI from a customizable parameter.(©Øøÿıÿÿÿÿ8ğ˜–øê,
+dsquid:S1075"ARefactor your code to get this URI from a customizable parameter.(…ş‹•ûÿÿÿÿ8ğ˜–øê,
+‚squid:S3008"dRename this field "service_dm_user_save_path" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(üä–Ï8­ƒ€µù,
+Ÿ"squid:ClassVariableVisibilityCheck"jMake service_dm_scheduler_save_path a static final constant or non-public and provide accessors if needed.(—Ç¶Õ8ğ˜–øê,
+dsquid:S1075"ARefactor your code to get this URI from a customizable parameter.(ÃÊ×îøÿÿÿÿ8µïìúê,
+\squid:S1444"9Make this "public static client_dm_save_path" field final(”™ŸÉüÿÿÿÿ8ğ˜–øê,
+bsquid:S1444"?Make this "public static service_dm_item_save_path" field final(…ş‹•ûÿÿÿÿ8ğ˜–øê,
+Osquid:S1444"3Make this "public static template_path" field final(ÃÊ×îøÿÿÿÿ
+ƒsquid:S3008"fRename this field "service_dm_common_save_path" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™‘ãA8­ƒ€µù,
+csquid:S1444"@Make this "public static service_dm_order_save_path" field final(‚±ù¤øÿÿÿÿ8ğ˜–øê,
+dsquid:S1075"ARefactor your code to get this URI from a customizable parameter.(Á—â†üÿÿÿÿ8­ƒ€µù,
+Xsquid:S1444"5Make this "public static model_save_path" field final(©Øøÿıÿÿÿÿ8ğ˜–øê,
+^squid:S1075"ARefactor your code to get this URI from a customizable parameter.(™‘ãA8­ƒ€µù,
+‘"squid:ClassVariableVisibilityCheck"\Make mapper_save_path a static final constant or non-public and provide accessors if needed.(™»ôº8ğ˜–øê,
+_squid:S1075"ARefactor your code to get this URI from a customizable parameter.(—Ç¶Õ8ğ˜–øê,
+†squid:S3008"cRename this field "service_dm_pay_save_path" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(–ı¨ùÿÿÿÿ8ğ˜–øê,
+]squid:S1444"?Make this "public static service_dm_user_save_path" field final(üä–Ï8­ƒ€µù,
+Ÿ"squid:ClassVariableVisibilityCheck"eMake service_dm_item_save_path a static final constant or non-public and provide accessors if needed.(…ş‹•ûÿÿÿÿ8ğ˜–øê,
+Šsquid:S3008"gRename this field "client_dm_fallback_save_path" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Á—â†üÿÿÿÿ8ğ˜–øê,
+ˆsquid:S3008"eRename this field "service_dm_order_save_path" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚±ù¤øÿÿÿÿ8ğ˜–øê,
+}squid:S3008"ZRename this field "model_save_path" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(©Øøÿıÿÿÿÿ8ğ˜–øê,
+ "squid:ClassVariableVisibilityCheck"fMake service_dm_order_save_path a static final constant or non-public and provide accessors if needed.(‚±ù¤øÿÿÿÿ8ğ˜–øê,
+•"squid:ClassVariableVisibilityCheck"[Make model_save_path a static final constant or non-public and provide accessors if needed.(©Øøÿıÿÿÿÿ8ğ˜–øê,
+esquid:S1444"BMake this "public static client_dm_fallback_save_path" field final(Á—â†üÿÿÿÿ8ğ˜–øê,
+dsquid:S1075"ARefactor your code to get this URI from a customizable parameter.(”™ŸÉüÿÿÿÿ8ğ˜–øê,
+‡squid:S3008"iRename this field "service_dm_scheduler_save_path" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—Ç¶Õ8ğ˜–øê,
+^squid:S1444"AMake this "public static service_dm_common_save_path" field final(™‘ãA8­ƒ€µù,
+š"squid:ClassVariableVisibilityCheck"eMake service_dm_user_save_path a static final constant or non-public and provide accessors if needed.(üä–Ï8­ƒ€µù,
+›"squid:ClassVariableVisibilityCheck"gMake service_dm_common_save_path a static final constant or non-public and provide accessors if needed.(™‘ãA8­ƒ€µù,
+Vsquid:S1118":Add a private constructor to hide the implicit public one.(Ø¡²›ÿÿÿÿÿ
+asquid:S1444">Make this "public static service_dm_pay_save_path" field final(–ı¨ùÿÿÿÿ8ğ˜–øê,

@@ -1,0 +1,813 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="199dbce9-93f2-4330-8763-945cf9ad9815" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/code-parent/target/" />
+    <ignored path="$PROJECT_DIR$/code_parent/target/" />
+    <ignored path="$PROJECT_DIR$/common/dm_common/target/" />
+    <ignored path="$PROJECT_DIR$/common/dm_common/dm_common_dao/target/" />
+    <ignored path="$PROJECT_DIR$/common/dm_common/dm_common_modle/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1934001482">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="ftl" value="9" />
+          <entry key="java" value="20" />
+          <entry key="properties" value="3" />
+          <entry key="xml" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="FTL" value="9" />
+          <entry key="JAVA" value="20" />
+          <entry key="Properties" value="3" />
+          <entry key="XML" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="ftl" value="68" />
+          <entry key="java" value="198" />
+          <entry key="properties" value="23" />
+          <entry key="xml" value="17" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="FTL" value="68" />
+          <entry key="JAVA" value="198" />
+          <entry key="Properties" value="23" />
+          <entry key="XML" value="17" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code_parent/src/main/java/cn/code/constant/Constant.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="466">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/dm_common/dm_common_dao/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/dm_common/dm_common_dao/src/main/java/cn/dm/mapper/DmSchedulerMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="175">
+              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code_parent/src/main/resources/database.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="50">
+              <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/code_parent/src/main/java/cn/code/Genterator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="441">
+              <caret line="65" column="5" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/dm_common/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/dm_common/dm_common_modle/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="246">
+              <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/common/dm_common/dm_common_client/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/dm_common/dm_common_modle/src/main/java/cn/dm/pojo/DmTrade.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>com</find>
+      <find>service_dm_common_save_path</find>
+      <find>cnmon</find>
+      <find>dm-</find>
+      <find>common-</find>
+      <find>B</find>
+      <find>dm-common-model</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>cn</replace>
+      <replace>common</replace>
+      <replace>dm_</replace>
+      <replace>common_</replace>
+      <replace>dm_common_model</replace>
+    </replaceStrings>
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="E:/x2june/imooc-spring-cloud/hello-world" value="PREVIEW" />
+        <entry key="F:/spring5/pro-spring-5-master/chapter05/security" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/code-parent/src/main/java/com/code/constant/Constant.java" />
+        <option value="$PROJECT_DIR$/code-parent/src/main/resources/database.properties" />
+        <option value="$PROJECT_DIR$/code_parent/src/main/resources/dm/service_dm.ftl" />
+        <option value="$PROJECT_DIR$/code_parent/src/main/resources/dm/model.ftl" />
+        <option value="$PROJECT_DIR$/code_parent/src/main/resources/dm/clazzMapper.ftl" />
+        <option value="$PROJECT_DIR$/code_parent/src/main/java/com/code/constant/Constant.java" />
+        <option value="$PROJECT_DIR$/code_parent/src/main/java/cn/code/handler/MvcHandler.java" />
+        <option value="$PROJECT_DIR$/code_parent/src/main/java/cn/code/constant/Constant.java" />
+        <option value="$PROJECT_DIR$/code_parent/src/main/resources/database.properties" />
+        <option value="$PROJECT_DIR$/code_parent/src/main/java/cn/code/Genterator.java" />
+        <option value="$PROJECT_DIR$/common/dm_common/pom.xml" />
+        <option value="$PROJECT_DIR$/common/dm_common/dm_common_dao/pom.xml" />
+        <option value="$PROJECT_DIR$/common/dm_common/dm_common_modle/pom.xml" />
+        <option value="$PROJECT_DIR$/common/dm_common/dm_common_client/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="dm_common" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1400" />
+    <option name="height" value="824" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="dm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dm" type="462c0819:PsiDirectoryNode" />
+              <item name="base_provider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dm" type="462c0819:PsiDirectoryNode" />
+              <item name="base_provider" type="462c0819:PsiDirectoryNode" />
+              <item name="dm_base_provider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dm" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dm" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="dm_common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dm" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="dm_common" type="462c0819:PsiDirectoryNode" />
+              <item name="dm_common_client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dm" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="dm_common" type="462c0819:PsiDirectoryNode" />
+              <item name="dm_common_dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dm" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+              <item name="dm_common" type="462c0819:PsiDirectoryNode" />
+              <item name="dm_common_modle" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dm" type="462c0819:PsiDirectoryNode" />
+              <item name="item_provider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dm" type="462c0819:PsiDirectoryNode" />
+              <item name="item_provider" type="462c0819:PsiDirectoryNode" />
+              <item name="dm_item_provider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dm" type="462c0819:PsiDirectoryNode" />
+              <item name="item_provider" type="462c0819:PsiDirectoryNode" />
+              <item name="dm_item_provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dm" type="462c0819:PsiDirectoryNode" />
+              <item name="item_provider" type="462c0819:PsiDirectoryNode" />
+              <item name="dm_item_provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dm" type="462c0819:PsiDirectoryNode" />
+              <item name="item_provider" type="462c0819:PsiDirectoryNode" />
+              <item name="dm_item_provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dm" type="462c0819:PsiDirectoryNode" />
+              <item name="item_provider" type="462c0819:PsiDirectoryNode" />
+              <item name="dm_item_provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dm" type="462c0819:PsiDirectoryNode" />
+              <item name="item_provider" type="462c0819:PsiDirectoryNode" />
+              <item name="dm_item_provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="dm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dm" type="462c0819:PsiDirectoryNode" />
+              <item name="item_provider" type="462c0819:PsiDirectoryNode" />
+              <item name="dm_item_provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="dm" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dm" type="462c0819:PsiDirectoryNode" />
+              <item name="schedule_provider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dm" type="462c0819:PsiDirectoryNode" />
+              <item name="schedule_provider" type="462c0819:PsiDirectoryNode" />
+              <item name="dm_schedule_provider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dm" type="462c0819:PsiDirectoryNode" />
+              <item name="schedule_provider" type="462c0819:PsiDirectoryNode" />
+              <item name="dm_schedule_provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dm" type="462c0819:PsiDirectoryNode" />
+              <item name="schedule_provider" type="462c0819:PsiDirectoryNode" />
+              <item name="dm_schedule_provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dm" type="462c0819:PsiDirectoryNode" />
+              <item name="schedule_provider" type="462c0819:PsiDirectoryNode" />
+              <item name="dm_schedule_provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dm" type="462c0819:PsiDirectoryNode" />
+              <item name="schedule_provider" type="462c0819:PsiDirectoryNode" />
+              <item name="dm_schedule_provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dm" type="462c0819:PsiDirectoryNode" />
+              <item name="schedule_provider" type="462c0819:PsiDirectoryNode" />
+              <item name="dm_schedule_provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="dm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dm" type="462c0819:PsiDirectoryNode" />
+              <item name="schedule_provider" type="462c0819:PsiDirectoryNode" />
+              <item name="dm_schedule_provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="dm" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dm" type="462c0819:PsiDirectoryNode" />
+              <item name="user_provider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dm" type="462c0819:PsiDirectoryNode" />
+              <item name="user_provider" type="462c0819:PsiDirectoryNode" />
+              <item name="dm_user_provider" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dm" type="462c0819:PsiDirectoryNode" />
+              <item name="user_provider" type="462c0819:PsiDirectoryNode" />
+              <item name="dm_user_provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dm" type="462c0819:PsiDirectoryNode" />
+              <item name="user_provider" type="462c0819:PsiDirectoryNode" />
+              <item name="dm_user_provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dm" type="462c0819:PsiDirectoryNode" />
+              <item name="user_provider" type="462c0819:PsiDirectoryNode" />
+              <item name="dm_user_provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dm" type="462c0819:PsiDirectoryNode" />
+              <item name="user_provider" type="462c0819:PsiDirectoryNode" />
+              <item name="dm_user_provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dm" type="462c0819:PsiDirectoryNode" />
+              <item name="user_provider" type="462c0819:PsiDirectoryNode" />
+              <item name="dm_user_provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="dm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dm" type="462c0819:PsiDirectoryNode" />
+              <item name="user_provider" type="462c0819:PsiDirectoryNode" />
+              <item name="dm_user_provider" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cn" type="462c0819:PsiDirectoryNode" />
+              <item name="dm" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553509047062" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/common/dm_common/pom.xml" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\dm\common\dm_common\dm_common_modle\src\main\java\cn\dm\pojo" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Genterator (1)">
+    <configuration name="Genterator (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.code.Genterator" />
+      <module name="parent" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.code.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Genterator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.code.Genterator" />
+      <module name="parent" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.code.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Genterator" />
+      <item itemvalue="Application.Genterator (1)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Genterator (1)" />
+        <item itemvalue="Application.Genterator" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="199dbce9-93f2-4330-8763-945cf9ad9815" name="Default Changelist" comment="" />
+      <created>1553501224363</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1553501224363</updated>
+      <workItem from="1553501225810" duration="6779000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="6779000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" weight="0.329718" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Spring" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.27765727" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Maven Projects" visible="true" weight="0.19669509" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/code-parent/src/main/resources/dm/model.ftl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code-parent/src/main/java/com/code/bean/Table.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code-parent/src/main/java/com/code/bean/Cloumn.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code-parent/src/main/java/com/code/constant/Constant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code-parent/src/main/java/com/code/Genterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code-parent/src/main/resources/database.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code_parent/src/main/java/cn/code/bean/Table.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code_parent/src/main/java/cn/code/bean/Cloumn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base_provider/dm_base_provider/src/main/java/cn/dm/service/DmBaseProviderApplication.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code_parent/src/main/resources/dm/service_dm.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/dm_common/dm_common_modle/src/main/java/cn/dm/pojo/DmArea.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code_parent/src/main/resources/dm/client_dm_item.ftl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code_parent/src/main/resources/dm/client_dm_common.ftl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code_parent/src/main/resources/dm/clazzMapper.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code_parent/src/main/resources/dm/model.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://E:/BaiduNetdiskDownload/7周Spring Cloud微服务架构项目实战/资料/2/代码/javawork/code-parent/src/main/java/com/code/constant/Constant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="18" column="118" selection-start-line="18" selection-start-column="111" selection-end-line="18" selection-end-column="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/dm_common/dm_common_modle/src/main/java/cn/dm/pojo/DmTrade.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code_parent/src/main/java/cn/code/handler/MvcHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="171" column="44" selection-start-line="171" selection-start-column="44" selection-end-line="171" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/dm_common/dm_common_dao/src/main/resources/mapper/DmUserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1525">
+          <caret line="17" column="37" lean-forward="true" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/dm_common/dm_common_dao/src/main/java/cn/dm/mapper/DmSchedulerSeatMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/dm_common/dm_common_client/src/main/java/cn/dm/fallback/DmItemClientFallBack.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/dm_common/dm_common_client/src/main/java/cn/dm/fallback/DmAreaClientFallBack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-334" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code_parent/src/main/java/cn/code/constant/Constant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/dm_common/dm_common_dao/src/main/java/cn/dm/mapper/DmSchedulerMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code_parent/src/main/resources/database.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/code_parent/src/main/java/cn/code/Genterator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="65" column="5" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/dm_common/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/dm_common/dm_common_modle/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/dm_common/dm_common_dao/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/dm_common/dm_common_client/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

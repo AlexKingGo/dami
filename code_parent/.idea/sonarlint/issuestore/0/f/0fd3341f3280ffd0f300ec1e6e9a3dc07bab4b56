@@ -1,0 +1,13 @@
+
+]squid:S1192"FDefine a constant instead of duplicating this literal "UTF-8" 3 times.(ª€Ä´
+\squid:CallToDeprecatedMethod"5Remove this use of "Configuration"; it is deprecated.(€Í³%
+isquid:CallToDeprecatedMethod"<Remove this use of "DefaultObjectWrapper"; it is deprecated.(Œ—˜ðþÿÿÿÿ
+Vsquid:S1118":Add a private constructor to hide the implicit public one.(ÆÃ²úÿÿÿÿ
+]squid:S2259%"FA "NullPointerException" could be thrown; "template" is nullable here.(Î˜ûó
+]squid:S22594"FA "NullPointerException" could be thrown; "template" is nullable here.(Î˜ûó
+isquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µÏŒÌ
+isquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„×€Â
+nsquid:S00117+"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸ñîÐüÿÿÿÿ
+?squid:S1148"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+?squid:S1148'"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+?squid:S11486"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ

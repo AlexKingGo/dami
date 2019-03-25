@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.dm.mapper.DmUserMapper">
+
+    <select id="getDmUserById" resultType="cn.dm.pojo.DmUser">
+        select
+                id as id,
+                phone as phone,
+                password as password,
+                wxUserId as wxUserId,
+                realName as realName,
+                nickName as nickName,
+                sex as sex,
+                hobby as hobby,
+                idCard as idCard,
+                birthday as birthday,
+                createdTime as createdTime,
+                updatedTime as updatedTime
+        from dm_user
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getDmUserListByMap" resultType="cn.dm.pojo.DmUser" parameterType="java.util.Map">
+        select
+                id as id,
+                phone as phone,
+                password as password,
+                wxUserId as wxUserId,
+                realName as realName,
+                nickName as nickName,
+                sex as sex,
+                hobby as hobby,
+                idCard as idCard,
+                birthday as birthday,
+                createdTime as createdTime,
+                updatedTime as updatedTime
+        from dm_user
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="phone != null and phone!=''">
+                    and phone=#{phone}
+                </if>
+                <if test="password != null and password!=''">
+                    and password=#{password}
+                </if>
+                <if test="wxUserId != null and wxUserId!=''">
+                    and wxUserId=#{wxUserId}
+                </if>
+                <if test="realName != null and realName!=''">
+                    and realName=#{realName}
+                </if>
+                <if test="nickName != null and nickName!=''">
+                    and nickName=#{nickName}
+                </if>
+                <if test="sex != null and sex!=''">
+                    and sex=#{sex}
+                </if>
+                <if test="hobby != null and hobby!=''">
+                    and hobby=#{hobby}
+                </if>
+                <if test="idCard != null and idCard!=''">
+                    and idCard=#{idCard}
+                </if>
+                <if test="birthday != null and birthday!=''">
+                    and birthday=#{birthday}
+                </if>
+                <if test="createdTime != null and createdTime!=''">
+                    and createdTime=#{createdTime}
+                </if>
+                <if test="updatedTime != null and updatedTime!=''">
+                    and updatedTime=#{updatedTime}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getDmUserCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from dm_user
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="phone != null and phone!=''">
+                    and phone=#{phone}
+                </if>
+                <if test="password != null and password!=''">
+                    and password=#{password}
+                </if>
+                <if test="wxUserId != null and wxUserId!=''">
+                    and wxUserId=#{wxUserId}
+                </if>
+                <if test="realName != null and realName!=''">
+                    and realName=#{realName}
+                </if>
+                <if test="nickName != null and nickName!=''">
+                    and nickName=#{nickName}
+                </if>
+                <if test="sex != null and sex!=''">
+                    and sex=#{sex}
+                </if>
+                <if test="hobby != null and hobby!=''">
+                    and hobby=#{hobby}
+                </if>
+                <if test="idCard != null and idCard!=''">
+                    and idCard=#{idCard}
+                </if>
+                <if test="birthday != null and birthday!=''">
+                    and birthday=#{birthday}
+                </if>
+                <if test="createdTime != null and createdTime!=''">
+                    and createdTime=#{createdTime}
+                </if>
+                <if test="updatedTime != null and updatedTime!=''">
+                    and updatedTime=#{updatedTime}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertDmUser" parameterType="cn.dm.pojo.DmUser">
+        insert into dm_user(
+                        phone,
+                        password,
+                        wxUserId,
+                        realName,
+                        nickName,
+                        sex,
+                        hobby,
+                        idCard,
+                        birthday,
+                        createdTime,
+                        updatedTime)
+        values(
+                     #{phone},
+                     #{password},
+                     #{wxUserId},
+                     #{realName},
+                     #{nickName},
+                     #{sex},
+                     #{hobby},
+                     #{idCard},
+                     #{birthday},
+                     #{createdTime},
+                    #{updatedTime})
+    </insert>
+
+    <update id="updateDmUser" parameterType="cn.dm.pojo.DmUser">
+        update dm_user
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="phone != null and phone!=''">
+                            phone=#{phone},
+                        </if>
+                        <if test="password != null and password!=''">
+                            password=#{password},
+                        </if>
+                        <if test="wxUserId != null and wxUserId!=''">
+                            wxUserId=#{wxUserId},
+                        </if>
+                        <if test="realName != null and realName!=''">
+                            realName=#{realName},
+                        </if>
+                        <if test="nickName != null and nickName!=''">
+                            nickName=#{nickName},
+                        </if>
+                        <if test="sex != null and sex!=''">
+                            sex=#{sex},
+                        </if>
+                        <if test="hobby != null and hobby!=''">
+                            hobby=#{hobby},
+                        </if>
+                        <if test="idCard != null and idCard!=''">
+                            idCard=#{idCard},
+                        </if>
+                        <if test="birthday != null and birthday!=''">
+                            birthday=#{birthday},
+                        </if>
+                        <if test="createdTime != null and createdTime!=''">
+                            createdTime=#{createdTime},
+                        </if>
+                        <if test="updatedTime != null and updatedTime!=''">
+                            updatedTime=#{updatedTime}
+                        </if>
+        </trim>
+    </update>
+</mapper>

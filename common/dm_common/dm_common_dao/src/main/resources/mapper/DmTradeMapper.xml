@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.dm.mapper.DmTradeMapper">
+
+    <select id="getDmTradeById" resultType="cn.dm.pojo.DmTrade">
+        select
+                id as id,
+                orderNo as orderNo,
+                tradeNo as tradeNo,
+                payMethod as payMethod,
+                amount as amount,
+                createdTime as createdTime,
+                updatedTime as updatedTime
+        from dm_trade
+        <trim prefix="where" prefixOverrides="and | or">
+            <if test="id != null">
+                and id=#{id}
+            </if>
+        </trim>
+    </select>
+
+    <select id="getDmTradeListByMap" resultType="cn.dm.pojo.DmTrade" parameterType="java.util.Map">
+        select
+                id as id,
+                orderNo as orderNo,
+                tradeNo as tradeNo,
+                payMethod as payMethod,
+                amount as amount,
+                createdTime as createdTime,
+                updatedTime as updatedTime
+        from dm_trade
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="orderNo != null and orderNo!=''">
+                    and orderNo=#{orderNo}
+                </if>
+                <if test="tradeNo != null and tradeNo!=''">
+                    and tradeNo=#{tradeNo}
+                </if>
+                <if test="payMethod != null and payMethod!=''">
+                    and payMethod=#{payMethod}
+                </if>
+                <if test="amount != null and amount!=''">
+                    and amount=#{amount}
+                </if>
+                <if test="createdTime != null and createdTime!=''">
+                    and createdTime=#{createdTime}
+                </if>
+                <if test="updatedTime != null and updatedTime!=''">
+                    and updatedTime=#{updatedTime}
+                </if>
+        </trim>
+        <if test="beginPos != null and pageSize != null ">
+            limit #{beginPos},#{pageSize}
+        </if>
+    </select>
+
+    <select id="getDmTradeCountByMap" resultType="Integer"  parameterType="java.util.Map">
+        select count(*) from dm_trade
+        <trim prefix="where" prefixOverrides="and | or">
+                <if test="id != null and id!=''">
+                    and id=#{id}
+                </if>
+                <if test="orderNo != null and orderNo!=''">
+                    and orderNo=#{orderNo}
+                </if>
+                <if test="tradeNo != null and tradeNo!=''">
+                    and tradeNo=#{tradeNo}
+                </if>
+                <if test="payMethod != null and payMethod!=''">
+                    and payMethod=#{payMethod}
+                </if>
+                <if test="amount != null and amount!=''">
+                    and amount=#{amount}
+                </if>
+                <if test="createdTime != null and createdTime!=''">
+                    and createdTime=#{createdTime}
+                </if>
+                <if test="updatedTime != null and updatedTime!=''">
+                    and updatedTime=#{updatedTime}
+                </if>
+        </trim>
+    </select>
+
+    <insert id="insertDmTrade" parameterType="cn.dm.pojo.DmTrade">
+        insert into dm_trade(
+                        orderNo,
+                        tradeNo,
+                        payMethod,
+                        amount,
+                        createdTime,
+                        updatedTime)
+        values(
+                     #{orderNo},
+                     #{tradeNo},
+                     #{payMethod},
+                     #{amount},
+                     #{createdTime},
+                    #{updatedTime})
+    </insert>
+
+    <update id="updateDmTrade" parameterType="cn.dm.pojo.DmTrade">
+        update dm_trade
+        <trim prefix="set" suffixOverrides="," suffix="where id=#{id}">
+                        <if test="orderNo != null and orderNo!=''">
+                            orderNo=#{orderNo},
+                        </if>
+                        <if test="tradeNo != null and tradeNo!=''">
+                            tradeNo=#{tradeNo},
+                        </if>
+                        <if test="payMethod != null and payMethod!=''">
+                            payMethod=#{payMethod},
+                        </if>
+                        <if test="amount != null and amount!=''">
+                            amount=#{amount},
+                        </if>
+                        <if test="createdTime != null and createdTime!=''">
+                            createdTime=#{createdTime},
+                        </if>
+                        <if test="updatedTime != null and updatedTime!=''">
+                            updatedTime=#{updatedTime}
+                        </if>
+        </trim>
+    </update>
+</mapper>
